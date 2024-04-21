@@ -3,6 +3,8 @@ ASFLAGS = -march=rv64im
 # The ROM image of every program, which the instruction memory loads
 IMAGES = $(patsubst %.s,hex/%.hex,$(wildcard *.s))
 
+.PRECIOUS: %.o
+
 all: $(IMAGES)
 
 %.o: %.s
