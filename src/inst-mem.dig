@@ -140,6 +140,11 @@
           <string>Bits</string>
           <int>32</int>
         </entry>
+        <entry>
+          <string>Data</string>
+          <data>200513,300593,400613,500693,8000ef,c0001073,2a502b3,2b282b3,2c50333
+,628533,d50533,8067</data>
+        </entry>
       </elementAttributes>
       <pos x="1120" y="340"/>
     </visualElement>
