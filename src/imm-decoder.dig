@@ -151,20 +151,6 @@
       <pos x="300" y="260"/>
     </visualElement>
     <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>0</long>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>64</int>
-        </entry>
-      </elementAttributes>
-      <pos x="300" y="320"/>
-    </visualElement>
-    <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
         <entry>
@@ -230,8 +216,72 @@
       </elementAttributes>
       <pos x="160" y="380"/>
     </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>32</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>12-31</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>0-11,12-31</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>32</string>
+        </entry>
+      </elementAttributes>
+      <pos x="180" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>12</int>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>BitExtender</elementName>
+      <elementAttributes>
+        <entry>
+          <string>inputBits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>outputBits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="240" y="320"/>
+    </visualElement>
   </visualElements>
   <wires>
+    <wire>
+      <p1 x="140" y="320"/>
+      <p2 x="180" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="320"/>
+      <p2 x="240" y="320"/>
+    </wire>
     <wire>
       <p1 x="300" y="320"/>
       <p2 x="340" y="320"/>
@@ -243,6 +293,14 @@
     <wire>
       <p1 x="100" y="400"/>
       <p2 x="180" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="340"/>
+      <p2 x="180" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="340"/>
+      <p2 x="80" y="340"/>
     </wire>
     <wire>
       <p1 x="300" y="260"/>
@@ -294,6 +352,10 @@
     </wire>
     <wire>
       <p1 x="40" y="140"/>
+      <p2 x="40" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="340"/>
       <p2 x="40" y="400"/>
     </wire>
   </wires>
