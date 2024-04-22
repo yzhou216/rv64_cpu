@@ -67,12 +67,12 @@
     <visualElement>
       <elementName>jal-eq.dig</elementName>
       <elementAttributes/>
-      <pos x="40" y="3440"/>
+      <pos x="40" y="3760"/>
     </visualElement>
     <visualElement>
       <elementName>jalr-eq.dig</elementName>
       <elementAttributes/>
-      <pos x="80" y="3500"/>
+      <pos x="80" y="3820"/>
     </visualElement>
     <visualElement>
       <elementName>ROM</elementName>
@@ -88,7 +88,8 @@
         <entry>
           <string>Data</string>
           <data>c0000,c0080,c0100,c0180,c0200,c0280,c0300,c1000,c1180,c1200,c1400
-,c1068,c106c,82038,8203c,8b801,93801,9b801,a3801,c4380,6d801,69001</data>
+,c1060,c1068,c106c,82030,82038,8203c,8b801,93801,9b801,a3801,c4380
+,6d801,69001</data>
         </entry>
         <entry>
           <string>intFormat</string>
@@ -556,7 +557,7 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="80" y="3380"/>
+      <pos x="80" y="3700"/>
     </visualElement>
     <visualElement>
       <elementName>Comparator</elementName>
@@ -570,7 +571,7 @@
           <int>7</int>
         </entry>
       </elementAttributes>
-      <pos x="100" y="3360"/>
+      <pos x="100" y="3680"/>
     </visualElement>
     <visualElement>
       <elementName>opcode-funct3-eq.dig</elementName>
@@ -624,52 +625,6 @@
           <string>BEQ</string>
         </entry>
       </elementAttributes>
-      <pos x="40" y="2720"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>99</long>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>7</int>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>bin</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="2800"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>0</long>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>3</int>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>bin</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="2780"/>
-    </visualElement>
-    <visualElement>
-      <elementName>opcode-funct3-eq.dig</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>BLT</string>
-        </entry>
-      </elementAttributes>
       <pos x="40" y="3040"/>
     </visualElement>
     <visualElement>
@@ -695,7 +650,7 @@
       <elementAttributes>
         <entry>
           <string>Value</string>
-          <long>4</long>
+          <long>0</long>
         </entry>
         <entry>
           <string>Bits</string>
@@ -713,10 +668,10 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>BNE</string>
+          <string>BLT</string>
         </entry>
       </elementAttributes>
-      <pos x="40" y="2880"/>
+      <pos x="40" y="3360"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -734,38 +689,14 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="20" y="2960"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Bits</string>
-          <int>3</int>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>bin</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="2940"/>
-    </visualElement>
-    <visualElement>
-      <elementName>opcode-funct3-eq.dig</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>BGE</string>
-        </entry>
-      </elementAttributes>
-      <pos x="40" y="3200"/>
+      <pos x="20" y="3440"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
       <elementAttributes>
         <entry>
           <string>Value</string>
-          <long>5</long>
+          <long>4</long>
         </entry>
         <entry>
           <string>Bits</string>
@@ -776,7 +707,17 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="20" y="3260"/>
+      <pos x="20" y="3420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>opcode-funct3-eq.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>BNE</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="3200"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -795,6 +736,66 @@
         </entry>
       </elementAttributes>
       <pos x="20" y="3280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="3260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>opcode-funct3-eq.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>BGE</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="3520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>5</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="3580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>99</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>7</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="3600"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -868,27 +869,7 @@
           <long>0</long>
         </entry>
       </elementAttributes>
-      <pos x="700" y="540"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>0</long>
-        </entry>
-      </elementAttributes>
       <pos x="700" y="580"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>0</long>
-        </entry>
-      </elementAttributes>
-      <pos x="700" y="560"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -1186,7 +1167,7 @@
           <string>SD</string>
         </entry>
       </elementAttributes>
-      <pos x="40" y="2560"/>
+      <pos x="40" y="2880"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -1204,7 +1185,7 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="20" y="2620"/>
+      <pos x="20" y="2940"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -1222,7 +1203,7 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="20" y="2640"/>
+      <pos x="20" y="2960"/>
     </visualElement>
     <visualElement>
       <elementName>opcode-funct3-eq.dig</elementName>
@@ -1232,80 +1213,6 @@
           <string>LD</string>
         </entry>
       </elementAttributes>
-      <pos x="40" y="2240"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>3</long>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>3</int>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>bin</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="2300"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>3</long>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>7</int>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>bin</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="2320"/>
-    </visualElement>
-    <visualElement>
-      <elementName>opcode-funct3-eq.dig</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>LW</string>
-        </entry>
-      </elementAttributes>
-      <pos x="40" y="2080"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Const</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Value</string>
-          <long>2</long>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>bin</intFormat>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>3</int>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="2140"/>
-    </visualElement>
-    <visualElement>
-      <elementName>opcode-funct3-eq.dig</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>SW</string>
-        </entry>
-      </elementAttributes>
       <pos x="40" y="2400"/>
     </visualElement>
     <visualElement>
@@ -1313,7 +1220,7 @@
       <elementAttributes>
         <entry>
           <string>Value</string>
-          <long>2</long>
+          <long>3</long>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1342,7 +1249,81 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="20" y="2160"/>
+      <pos x="20" y="2480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>opcode-funct3-eq.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>LW</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="2240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>2</long>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>opcode-funct3-eq.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>SW</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="2720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>2</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>3</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>7</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2320"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -1360,7 +1341,99 @@
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="20" y="2480"/>
+      <pos x="20" y="2800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>opcode-funct3-eq.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>LB</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="2080"/>
+    </visualElement>
+    <visualElement>
+      <elementName>opcode-funct3-eq.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>SB</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="2560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>3</long>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>7</int>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>35</long>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>7</int>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+      </elementAttributes>
+      <pos x="20" y="2620"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -1371,6 +1444,10 @@
     <wire>
       <p1 x="-180" y="2560"/>
       <p2 x="40" y="2560"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="3840"/>
+      <p2 x="620" y="3840"/>
     </wire>
     <wire>
       <p1 x="320" y="260"/>
@@ -1417,8 +1494,16 @@
       <p2 x="40" y="2320"/>
     </wire>
     <wire>
+      <p1 x="20" y="3600"/>
+      <p2 x="40" y="3600"/>
+    </wire>
+    <wire>
       <p1 x="-160" y="2580"/>
       <p2 x="40" y="2580"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="3860"/>
+      <p2 x="80" y="3860"/>
     </wire>
     <wire>
       <p1 x="340" y="280"/>
@@ -1449,7 +1534,7 @@
       <p2 x="40" y="540"/>
     </wire>
     <wire>
-      <p1 x="700" y="540"/>
+      <p1 x="600" y="540"/>
       <p2 x="720" y="540"/>
     </wire>
     <wire>
@@ -1466,7 +1551,7 @@
     </wire>
     <wire>
       <p1 x="-180" y="3360"/>
-      <p2 x="100" y="3360"/>
+      <p2 x="40" y="3360"/>
     </wire>
     <wire>
       <p1 x="20" y="1060"/>
@@ -1505,20 +1590,12 @@
       <p2 x="40" y="560"/>
     </wire>
     <wire>
-      <p1 x="700" y="560"/>
+      <p1 x="620" y="560"/>
       <p2 x="720" y="560"/>
     </wire>
     <wire>
       <p1 x="20" y="1840"/>
       <p2 x="40" y="1840"/>
-    </wire>
-    <wire>
-      <p1 x="80" y="3380"/>
-      <p2 x="100" y="3380"/>
-    </wire>
-    <wire>
-      <p1 x="160" y="3380"/>
-      <p2 x="540" y="3380"/>
     </wire>
     <wire>
       <p1 x="-160" y="820"/>
@@ -1529,16 +1606,20 @@
       <p2 x="40" y="2100"/>
     </wire>
     <wire>
+      <p1 x="-160" y="3380"/>
+      <p2 x="40" y="3380"/>
+    </wire>
+    <wire>
       <p1 x="20" y="1080"/>
       <p2 x="40" y="1080"/>
     </wire>
     <wire>
-      <p1 x="20" y="2620"/>
-      <p2 x="40" y="2620"/>
-    </wire>
-    <wire>
       <p1 x="-160" y="60"/>
       <p2 x="40" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="2620"/>
+      <p2 x="40" y="2620"/>
     </wire>
     <wire>
       <p1 x="20" y="320"/>
@@ -1577,12 +1658,12 @@
       <p2 x="380" y="2120"/>
     </wire>
     <wire>
-      <p1 x="-200" y="-80"/>
-      <p2 x="-180" y="-80"/>
+      <p1 x="160" y="3400"/>
+      <p2 x="540" y="3400"/>
     </wire>
     <wire>
-      <p1 x="20" y="2640"/>
-      <p2 x="40" y="2640"/>
+      <p1 x="-200" y="-80"/>
+      <p2 x="-180" y="-80"/>
     </wire>
     <wire>
       <p1 x="-140" y="80"/>
@@ -1591,6 +1672,10 @@
     <wire>
       <p1 x="-180" y="1360"/>
       <p2 x="40" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="20" y="2640"/>
+      <p2 x="40" y="2640"/>
     </wire>
     <wire>
       <p1 x="20" y="340"/>
@@ -1613,6 +1698,10 @@
       <p2 x="720" y="600"/>
     </wire>
     <wire>
+      <p1 x="20" y="3420"/>
+      <p2 x="40" y="3420"/>
+    </wire>
+    <wire>
       <p1 x="20" y="860"/>
       <p2 x="40" y="860"/>
     </wire>
@@ -1623,6 +1712,10 @@
     <wire>
       <p1 x="-180" y="2400"/>
       <p2 x="40" y="2400"/>
+    </wire>
+    <wire>
+      <p1 x="-180" y="3680"/>
+      <p2 x="100" y="3680"/>
     </wire>
     <wire>
       <p1 x="800" y="100"/>
@@ -1661,6 +1754,10 @@
       <p2 x="720" y="620"/>
     </wire>
     <wire>
+      <p1 x="20" y="3440"/>
+      <p2 x="40" y="3440"/>
+    </wire>
+    <wire>
       <p1 x="20" y="880"/>
       <p2 x="40" y="880"/>
     </wire>
@@ -1669,12 +1766,12 @@
       <p2 x="40" y="2160"/>
     </wire>
     <wire>
-      <p1 x="-180" y="3440"/>
-      <p2 x="40" y="3440"/>
+      <p1 x="80" y="3700"/>
+      <p2 x="100" y="3700"/>
     </wire>
     <wire>
-      <p1 x="160" y="3440"/>
-      <p2 x="560" y="3440"/>
+      <p1 x="160" y="3700"/>
+      <p2 x="580" y="3700"/>
     </wire>
     <wire>
       <p1 x="-160" y="2420"/>
@@ -1833,16 +1930,20 @@
       <p2 x="520" y="3240"/>
     </wire>
     <wire>
-      <p1 x="-180" y="3500"/>
-      <p2 x="80" y="3500"/>
+      <p1 x="20" y="2480"/>
+      <p2 x="40" y="2480"/>
     </wire>
     <wire>
       <p1 x="-140" y="1200"/>
       <p2 x="40" y="1200"/>
     </wire>
     <wire>
-      <p1 x="20" y="2480"/>
-      <p2 x="40" y="2480"/>
+      <p1 x="-180" y="3760"/>
+      <p2 x="40" y="3760"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="3760"/>
+      <p2 x="600" y="3760"/>
     </wire>
     <wire>
       <p1 x="240" y="180"/>
@@ -1897,8 +1998,8 @@
       <p2 x="40" y="2240"/>
     </wire>
     <wire>
-      <p1 x="160" y="3520"/>
-      <p2 x="580" y="3520"/>
+      <p1 x="-180" y="3520"/>
+      <p2 x="40" y="3520"/>
     </wire>
     <wire>
       <p1 x="160" y="1220"/>
@@ -1958,7 +2059,7 @@
     </wire>
     <wire>
       <p1 x="-160" y="3540"/>
-      <p2 x="80" y="3540"/>
+      <p2 x="40" y="3540"/>
     </wire>
     <wire>
       <p1 x="20" y="1240"/>
@@ -2005,8 +2106,16 @@
       <p2 x="400" y="2280"/>
     </wire>
     <wire>
+      <p1 x="160" y="3560"/>
+      <p2 x="560" y="3560"/>
+    </wire>
+    <wire>
       <p1 x="20" y="1260"/>
       <p2 x="40" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="-180" y="3820"/>
+      <p2 x="80" y="3820"/>
     </wire>
     <wire>
       <p1 x="20" y="2800"/>
@@ -2049,6 +2158,10 @@
       <p2 x="40" y="3060"/>
     </wire>
     <wire>
+      <p1 x="20" y="3580"/>
+      <p2 x="40" y="3580"/>
+    </wire>
+    <wire>
       <p1 x="20" y="2300"/>
       <p2 x="40" y="2300"/>
     </wire>
@@ -2066,7 +2179,7 @@
     </wire>
     <wire>
       <p1 x="580" y="520"/>
-      <p2 x="580" y="3520"/>
+      <p2 x="580" y="3700"/>
     </wire>
     <wire>
       <p1 x="200" y="140"/>
@@ -2086,7 +2199,7 @@
     </wire>
     <wire>
       <p1 x="-140" y="1760"/>
-      <p2 x="-140" y="3820"/>
+      <p2 x="-140" y="3940"/>
     </wire>
     <wire>
       <p1 x="-140" y="1200"/>
@@ -2137,6 +2250,10 @@
       <p2 x="280" y="1220"/>
     </wire>
     <wire>
+      <p1 x="600" y="540"/>
+      <p2 x="600" y="3760"/>
+    </wire>
+    <wire>
       <p1 x="220" y="160"/>
       <p2 x="220" y="680"/>
     </wire>
@@ -2146,7 +2263,7 @@
     </wire>
     <wire>
       <p1 x="540" y="480"/>
-      <p2 x="540" y="3380"/>
+      <p2 x="540" y="3400"/>
     </wire>
     <wire>
       <p1 x="-160" y="-20"/>
@@ -2159,6 +2276,14 @@
     <wire>
       <p1 x="-160" y="820"/>
       <p2 x="-160" y="980"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="3380"/>
+      <p2 x="-160" y="3540"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="3860"/>
+      <p2 x="-160" y="3960"/>
     </wire>
     <wire>
       <p1 x="-160" y="260"/>
@@ -2186,7 +2311,7 @@
     </wire>
     <wire>
       <p1 x="-160" y="3220"/>
-      <p2 x="-160" y="3540"/>
+      <p2 x="-160" y="3380"/>
     </wire>
     <wire>
       <p1 x="-160" y="60"/>
@@ -2214,7 +2339,7 @@
     </wire>
     <wire>
       <p1 x="-160" y="3540"/>
-      <p2 x="-160" y="3820"/>
+      <p2 x="-160" y="3860"/>
     </wire>
     <wire>
       <p1 x="-160" y="460"/>
@@ -2261,12 +2386,16 @@
       <p2 x="300" y="1400"/>
     </wire>
     <wire>
+      <p1 x="620" y="560"/>
+      <p2 x="620" y="3840"/>
+    </wire>
+    <wire>
       <p1 x="240" y="180"/>
       <p2 x="240" y="840"/>
     </wire>
     <wire>
       <p1 x="560" y="500"/>
-      <p2 x="560" y="3440"/>
+      <p2 x="560" y="3560"/>
     </wire>
     <wire>
       <p1 x="-180" y="-80"/>
@@ -2281,20 +2410,16 @@
       <p2 x="-180" y="1160"/>
     </wire>
     <wire>
+      <p1 x="-180" y="3520"/>
+      <p2 x="-180" y="3680"/>
+    </wire>
+    <wire>
       <p1 x="-180" y="440"/>
       <p2 x="-180" y="640"/>
     </wire>
     <wire>
-      <p1 x="-180" y="3500"/>
-      <p2 x="-180" y="3820"/>
-    </wire>
-    <wire>
       <p1 x="-180" y="1920"/>
       <p2 x="-180" y="2080"/>
-    </wire>
-    <wire>
-      <p1 x="-180" y="3440"/>
-      <p2 x="-180" y="3500"/>
     </wire>
     <wire>
       <p1 x="-180" y="2400"/>
@@ -2314,11 +2439,15 @@
     </wire>
     <wire>
       <p1 x="-180" y="3360"/>
-      <p2 x="-180" y="3440"/>
+      <p2 x="-180" y="3520"/>
     </wire>
     <wire>
       <p1 x="-180" y="240"/>
       <p2 x="-180" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="-180" y="3820"/>
+      <p2 x="-180" y="3960"/>
     </wire>
     <wire>
       <p1 x="-180" y="2240"/>
@@ -2327,6 +2456,10 @@
     <wire>
       <p1 x="-180" y="1720"/>
       <p2 x="-180" y="1920"/>
+    </wire>
+    <wire>
+      <p1 x="-180" y="3760"/>
+      <p2 x="-180" y="3820"/>
     </wire>
     <wire>
       <p1 x="-180" y="2720"/>
@@ -2343,6 +2476,10 @@
     <wire>
       <p1 x="-180" y="3200"/>
       <p2 x="-180" y="3360"/>
+    </wire>
+    <wire>
+      <p1 x="-180" y="3680"/>
+      <p2 x="-180" y="3760"/>
     </wire>
     <wire>
       <p1 x="-180" y="40"/>
