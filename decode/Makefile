@@ -1,5 +1,5 @@
-decode.hex: decode.bin mkdecoderom.awk
-	awk -f mkdecoderom.awk decode.bin > $@
+decode.hex: rom.csv mkdecoderom.awk
+	awk -f mkdecoderom.awk rom.csv > $@
 
 clean:
 	rm -f decode.hex
