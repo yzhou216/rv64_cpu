@@ -25,5 +25,9 @@ that `progs/hex` keeps, and turns the table of control words in
     make -C progs
     make -C decode
 
+Elsewhere, point `AS` and `OBJDUMP` at a RISC-V toolchain:
+
+    make -C progs AS=riscv64-linux-gnu-as OBJDUMP=riscv64-linux-gnu-objdump
+
 Digital stores what a ROM holds in the circuit, so a new image only
 takes effect once it is loaded into its ROM.

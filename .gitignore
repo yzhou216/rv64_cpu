@@ -1,0 +1,3 @@
+# What make writes besides the images of the programs in progs/hex
+/progs/*.o
+/decode/decode.hex
