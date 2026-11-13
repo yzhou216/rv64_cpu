@@ -38,6 +38,15 @@ Elsewhere, point `AS` and `OBJDUMP` at a RISC-V toolchain:
 Digital stores what a ROM holds in the circuit, so a new image only
 takes effect once it is loaded into its ROM.
 
+With Nix, `nix run` opens the processor in Digital, and `nix develop`
+opens a shell with Digital and the RISC-V binutils of Nixpkgs, in which
+plain `make` builds the images.  `nix flake check` runs every program on
+the processor and checks that the images and the ROMs match their
+sources:
+
+    nix run
+    nix flake check
+
 ## License
 
 rv64_cpu is free software: you can redistribute it and/or modify it under
