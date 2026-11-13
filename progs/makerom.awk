@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Yiyu Zhou <yiyu@yiyuzhou.io>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 # Writes the instructions in the output of objdump -d as a ROM image in the
 # hex format of Digital, and fails on any instruction that is not 32 bits
 # long, since the processor decodes no other.

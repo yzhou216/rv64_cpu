@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Yiyu Zhou <yiyu@yiyuzhou.io>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 # Writes the image of the decoder ROM from the table of control words.
 #
 # Every row of the table is an instruction, in the order of the inputs of

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Yiyu Zhou <yiyu@yiyuzhou.io>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 /* quadratic_s calculates the quadratic equation where
     a0 = x
     a1 = a

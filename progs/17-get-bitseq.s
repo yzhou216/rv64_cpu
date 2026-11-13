@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Yiyu Zhou <yiyu@yiyuzhou.io>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 /* get_bitseq_s returns a specified range of bits within a number as unsigned
     a0 is the number
     a1 is the start index

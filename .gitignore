@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Yiyu Zhou <yiyu@yiyuzhou.io>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 # What make writes besides the images of the programs in progs/hex
 /progs/*.o
 /decode/decode.hex

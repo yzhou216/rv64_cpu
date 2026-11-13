@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Yiyu Zhou <yiyu@yiyuzhou.io>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 main:
     li t0, 7
     lui a0, 0x28        # Bits 19 to 15 of this lui, rs1 in other formats, name t0
