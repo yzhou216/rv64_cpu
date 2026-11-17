@@ -66,6 +66,9 @@ EOF
 21-to-upper 0x464F4F4241520000 X X
 22-sort 0xC0000000A 0x800000006 0x400000002
 23-str-to-int 0xFFFF X X
+24-forward 6 4 2
+25-load-use 8 7 3
+26-flush 2 3 11
 PROGRAMS
 	printf '  </visualElements>\n  <wires/>\n  <measurementOrdering/>\n</circuit>\n'
 } >"$tests"
