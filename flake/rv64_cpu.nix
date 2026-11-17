@@ -32,7 +32,7 @@ stdenvNoCC.mkDerivation {
   '';
 
   meta = {
-    description = "Single-cycle 64-bit RISC-V processor in Digital";
+    description = "Single-cycle and pipelined 64-bit RISC-V processor in Digital";
     license = lib.licenses.gpl3Plus;
     mainProgram = "rv64_cpu";
     inherit (digital.meta) platforms;

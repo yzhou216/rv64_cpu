@@ -6,10 +6,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 # rv64_cpu
 
-Single-cycle 64-bit RISC-V processor in Digital
+Single-cycle and pipelined 64-bit RISC-V processor in Digital
 
-The processor executes the subset of RV64IM that its test programs in
-RISC-V assembly need, one instruction per clock cycle.  Matchers that
+`src/rv64_cpu.dig` executes the subset of RV64IM that the test programs
+in RISC-V assembly need, one instruction per clock cycle.  Matchers that
 recognize each instruction address a ROM of control words, which drive
 the datapath, and the instruction memory holds a ROM for every program.
 The `unimp` at the end of a program raises DONE, which stops the clock.
@@ -20,7 +20,9 @@ from the same parts: instruction fetch (IF), decode and register read
 pipeline register between each pair of stages.  Its hazard unit forwards
 results from MEM and WB to EX, holds DR for a cycle when it needs the
 result of a load in EX, and drops the two instructions fetched after a
-taken branch or jump.  The register file writes in the middle of the
+taken branch or jump.  EX picks the value to write back, the ALU result
+or PC+4, so MEM forwards that value as it is and WB only chooses between
+it and the loaded value.  The register file writes in the middle of the
 cycle, so that DR reads what WB writes, and DONE rises once the `unimp`
 reaches WB.
 
@@ -30,7 +32,7 @@ Open `src/rv64_cpu.dig` or `src/pipeline.dig` in
 [Digital](https://github.com/hneemann/Digital), set PROG to the number in
 the name of a program in `progs`, clear the processor with CLR, then set
 EN and run the clock until DONE rises.  A0, A1, and A2 show the argument
-registers, and the probes below the datapath show the others.
+registers, and probes show the others.
 
 ## Building
 
