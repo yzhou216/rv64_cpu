@@ -14,13 +14,23 @@ recognize each instruction address a ROM of control words, which drive
 the datapath, and the instruction memory holds a ROM for every program.
 The `unimp` at the end of a program raises DONE, which stops the clock.
 
+`src/pipeline.dig` runs the same programs on a five-stage pipeline built
+from the same parts: instruction fetch (IF), decode and register read
+(DR), execute (EX), memory access (MEM), and write-back (WB), with a
+pipeline register between each pair of stages.  Its hazard unit forwards
+results from MEM and WB to EX, holds DR for a cycle when it needs the
+result of a load in EX, and drops the two instructions fetched after a
+taken branch or jump.  The register file writes in the middle of the
+cycle, so that DR reads what WB writes, and DONE rises once the `unimp`
+reaches WB.
+
 ## Running
 
-Open `src/rv64_cpu.dig` in [Digital](https://github.com/hneemann/Digital),
-set PROG to the number in the name of a program in `progs`, clear the
-processor with CLR, then set EN and run the clock until DONE rises.  A0,
-A1, and A2 show the argument registers, and the probes below the
-datapath show the others.
+Open `src/rv64_cpu.dig` or `src/pipeline.dig` in
+[Digital](https://github.com/hneemann/Digital), set PROG to the number in
+the name of a program in `progs`, clear the processor with CLR, then set
+EN and run the clock until DONE rises.  A0, A1, and A2 show the argument
+registers, and the probes below the datapath show the others.
 
 ## Building
 
@@ -38,11 +48,11 @@ Elsewhere, point `AS` and `OBJDUMP` at a RISC-V toolchain:
 Digital stores what a ROM holds in the circuit, so a new image only
 takes effect once it is loaded into its ROM.
 
-With Nix, `nix run` opens the processor in Digital, and `nix develop`
-opens a shell with Digital and the RISC-V binutils of Nixpkgs, in which
-plain `make` builds the images.  `nix flake check` runs every program on
-the processor and checks that the images and the ROMs match their
-sources:
+With Nix, `nix run` opens the processor in Digital, `nix run .#pipeline`
+opens the pipeline, and `nix develop` opens a shell with Digital and the
+RISC-V binutils of Nixpkgs, in which plain `make` builds the images.
+`nix flake check` runs every program on both processors and checks that
+the images and the ROMs match their sources:
 
     nix run
     nix flake check

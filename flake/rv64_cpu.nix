@@ -26,6 +26,8 @@ stdenvNoCC.mkDerivation {
     cp -r src "$out/share/rv64_cpu"
     makeWrapper ${lib.getExe digital} "$out/bin/rv64_cpu" \
       --add-flags "$out/share/rv64_cpu/rv64_cpu.dig"
+    makeWrapper ${lib.getExe digital} "$out/bin/rv64_cpu-pipeline" \
+      --add-flags "$out/share/rv64_cpu/pipeline.dig"
     runHook postInstall
   '';
 

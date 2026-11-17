@@ -23,6 +23,10 @@
           sh ${./programs.sh} ${pkgs.jre}/bin/java ${pkgs.digital}/share/java/Digital.jar ${../src}
           touch "$out"
         '';
+        pipeline = pkgs.runCommandLocal "rv64_cpu-pipeline" { } ''
+          sh ${./programs.sh} ${pkgs.jre}/bin/java ${pkgs.digital}/share/java/Digital.jar ${../src} pipeline.dig
+          touch "$out"
+        '';
       };
 
       treefmt = {

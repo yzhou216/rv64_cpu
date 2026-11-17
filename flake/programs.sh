@@ -3,15 +3,17 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# Runs every test program on the processor in Digital and fails unless it
-# reaches the unimp at its end, which raises DONE, with the result that it
-# documents.  Each line below names a program, whose number PROG takes,
-# and the values of A0, A1, and A2, or X for any value.
+# Runs every test program on a processor in Digital, the single-cycle one
+# unless a circuit is named, and fails unless it reaches the unimp at its
+# end, which raises DONE, with the result that it documents, within 4000
+# clock cycles.  The pipeline needs 2742 of them for 19-fib-rec.  Each line
+# below names a program, whose number PROG takes, and the values of A0,
+# A1, and A2, or X for any value.
 #
-# Usage: programs.sh <java> <Digital.jar> <src>
+# Usage: programs.sh <java> <Digital.jar> <src> [<circuit>]
 
 set -eu
-java=$1 jar=$2 src=$3
+java=$1 jar=$2 src=$3 circuit=${4:-rv64_cpu.dig}
 tests=$(mktemp)
 {
 	printf '<?xml version="1.0" encoding="utf-8"?>\n<circuit>\n  <version>2</version>\n'
@@ -33,7 +35,7 @@ tests=$(mktemp)
             <dataString>PROG CLR EN CLK DONE A0 A1 A2
 $prog 1 0 C X X X X
 $prog 0 1 0 X X X X
-repeat(3000) $prog 0 1 C X X X X
+repeat(4000) $prog 0 1 C X X X X
 $prog 0 1 0 1 $a0 $a1 $a2</dataString>
           </testData>
         </entry>
@@ -73,4 +75,4 @@ PROGRAMS
 	printf '  </visualElements>\n  <wires/>\n  <measurementOrdering/>\n</circuit>\n'
 } >"$tests"
 cd "$src"
-"$java" -Djava.awt.headless=true -cp "$jar" CLI test -circ rv64_cpu.dig -tests "$tests"
+"$java" -Djava.awt.headless=true -cp "$jar" CLI test -circ "$circuit" -tests "$tests"
